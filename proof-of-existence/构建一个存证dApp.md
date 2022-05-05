@@ -19,9 +19,9 @@
 ### 在你开始之前
 在开始之前，请准备好以下内容：
 
-通过[安装Rust 和 Rust 工具链](https://docs.substrate.io/v3/getting-started/installation/)，为 Substrate 配置好开发环境。  
-您已完成[创建您的第一个 Substrate 区块链](https://docs.substrate.io/tutorials/v3/create-your-first-substrate-chain/)并拥有[node](https://github.com/substrate-developer-hub/substrate-node-template)和 [front-end](https://github.com/substrate-developer-hub/substrate-front-end-template)这2个模板程序。  
-熟悉软件开发并使用命令行工具。  
+* 通过[安装Rust 和 Rust 工具链](https://docs.substrate.io/v3/getting-started/installation/)，为 Substrate 配置好开发环境。  
+* 已完成[创建您的第一个 Substrate 区块链](https://docs.substrate.io/tutorials/v3/create-your-first-substrate-chain/)并拥有[node](https://github.com/substrate-developer-hub/substrate-node-template)和 [front-end](https://github.com/substrate-developer-hub/substrate-front-end-template)这2个模板程序。  
+* 熟悉软件开发并使用命令行工具。    
 通过完成本教程，您将实现以下目标：  
 * 了解定制 `模块(pallet)` 的基本方法。  
 * 了解 `Rust` 宏如何简化您需要编写的代码。  
@@ -143,7 +143,7 @@ cargo build -r
     }
 ```
 
-### 包括托盘错误error
+### 包括模块Pallet错误error
 事件表示对 `模块Pallet` 的调用成功完成。错误则表示调用失败以及记录失败的原因。对于本教程，定义以下错误：  
 1. 当尝试创建一个已经被创建的存证时。
 2. 当尝试撤销一个不存在的存证时。
