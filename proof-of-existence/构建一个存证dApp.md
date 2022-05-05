@@ -185,8 +185,9 @@ cargo build -r
 * `revoke_claim()` 允许所有者撤销存证。  
   
 这些函数使用 `StorageMap` 来实现以下逻辑：  
-* 如果一个存证已经有一个所有者和一个区块号，那么它已经被创建了。
-* 如果一个存证没有所有者和块号，那么它可以被创建并写入存储。  
+* 如果一个存证已经有一个所有者和一个区块号，那么表明它已经被创建了。
+* 如果一个存证没有所有者和块号，那么它可以被创建并写入存储。
+    
 要在存证`模块Pallet`中实现此逻辑，请将下面的代码添加到 `// TODO: add #[pallet::call]` 代码块：
 ```rust
     // 可调用函数(Dispatchable functions) 允许外部用户跟这个模块pallet进行交互，并更改存储状态
@@ -204,13 +205,13 @@ cargo build -r
             // https://docs.substrate.io/v3/runtime/origins
             let sender = ensure_signed(origin)?;
 
-            // 检查这个存证Proof还没有被其他人申明
+            // 检查这个存证Proof还没有被其他人声明
             ensure!(!Proofs::<T>::contains_key(&proof), Error::<T>::ProofAlreadyClaimed);
 
-            // 从 FRAME 库的 System 模块pallet获取当前区块号
+            // 从 FRAME 库的System模块pallet获取当前区块号
             let current_block = <frame_system::Pallet<T>>::block_number();
 
-            // 存储存证，包含存证 和 所有者及区块号
+            // 存储存证，包含: 存证和所有者及区块号
             Proofs::<T>::insert(&proof, (&sender, current_block));
 
             // 发出ClaimCreated事件，表明存证已经创建
@@ -251,7 +252,7 @@ cargo build -r
 **至此，已经完成了一个`模块Pallet`！** 现在要使用`模块Pallet`，必须在运行时正确配置它。
 
 ### 在运行时中配置MaxBytesInHash  
-应该好奇存证`模块Pallet`使用`BoundedVec<u8, T::MaxBytesInHash>`类型作为存储的类型，但到目前为止我们还没有对`MaxBytesInHash`是什么有具体的概念。这个常量应该在运行时被设置为一个合理某些数值。许多 `web3` 应用程序中使用的一种非常典型的哈希类型是[CID](https://github.com/multiformats/cid)，而 V1 版本的CID长度通常小于64 bytes。所以在这里`MaxBytesInHash`在运行时指定为这个长度（或更小）：  
+应该好奇存证`模块Pallet`使用`BoundedVec<u8, T::MaxBytesInHash>`类型作为存储的类型，但到目前为止我们还没有对`MaxBytesInHash`是什么有具体的概念。这个常量应该在运行时被设置为一个合理的某个数值。许多 `web3` 应用程序中使用的一种非常典型的哈希类型是[CID](https://github.com/multiformats/cid)，而 V1 版本的CID长度通常小于64 bytes。所以在这里`MaxBytesInHash`在运行时指定为这个长度（或更小）：  
 1. 在文本编辑器中打开 `runtime/src/lib.rs` 文件。  
 2. 更新`pallet_template::Config`代码块如下：
 ```rust
