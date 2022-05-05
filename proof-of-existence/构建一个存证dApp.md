@@ -63,12 +63,12 @@ tests.rs
       use frame_support::pallet_prelude::*;
       use frame_system::pallet_prelude::*;
 
-      // The struct on which we build all of our Pallet logic.
+      // 依托这个结构体，我们构建自己的逻辑.
       #[pallet::pallet]
       #[pallet::generate_store(pub(super) trait Store)]
       pub struct Pallet<T>(_);
 
-      /* Placeholder for defining custom types. */
+      /* 自定义类型可以放在这里. */
 
       // TODO: 待更新 `config` 代码块
       #[pallet::config]
@@ -92,7 +92,7 @@ tests.rs
       impl<T: Config> Pallet<T> {}
   }
 ```
-现在有了一个包含*事件(event)*、*错误(error)*、*存储(storage)*和*可调用函数(callable functions)*的占位符的脚手架代码。您将逐步更换 `//TODO` 块以构建完整的 PoE  `pallet`。  
+现在有了一个包含 *事件(event)* 、 *错误(error)* 、*存储(storage)* 和 *可调用函数(callable functions)* 的占位符的脚手架代码。您将逐步更换 `//TODO` 块以构建完整的 PoE  `pallet`。  
 6. 保存更改。
 7. （可选）通过运行以下命令检查代码能否编译：
 ```bash
