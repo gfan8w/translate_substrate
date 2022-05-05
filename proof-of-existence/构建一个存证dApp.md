@@ -282,7 +282,7 @@ cargo build --release
 ```bash
 ./target/release/node-template --dev
 ```
-`--dev`选项表示以预定义的`development`开发模式的链规格(chain specification)启动节点。 使用`--dev`选项请确保在任何时候停止和重新启动节点时，链数据都处于干净的工作状态。（可以再加上 `--tmp` 确保链数据处于干净状态）  
+`--dev`选项表示以预定义的`development`开发模式的链规格(chain specification)启动节点。 使用`--dev`选项请先确保在任何时候停止和重新启动节点时，链数据都处于干净的工作状态。（可以再加上 `--tmp` 确保链数据处于干净状态）  
 5. 验证节点产生块。
 
 ### 构建自定义前端组件
