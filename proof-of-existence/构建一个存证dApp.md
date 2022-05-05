@@ -99,7 +99,7 @@ tests.rs
 # 快速检查脚手架代码是否能工作 
 cargo check -p node-template-runtime
 # --- 或者 ---
-# Full release build of the node template, inclusive of the template
+# 包含新的template代码，完整的构建程序
 cargo build -r
 ```
 这会包括一些警告，但应该是可以编译的
