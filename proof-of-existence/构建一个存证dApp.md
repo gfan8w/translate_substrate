@@ -25,7 +25,7 @@
 
 通过完成本教程，您将实现以下目标：  
 * 了解定制 `模块(pallet)` 的基本方法。  
-* 了解 `Rust` 宏如何简化您需要编写的代码。  
+* 了解 `Rust` 宏如何简化需要编写的代码。  
 * 启动一个包含自定义 `模块(pallet)` 的区块链节点。 
 * 给带有存证(PoE) `模块(pallet)` 节点的程序添加前端代码。  
 
@@ -283,7 +283,7 @@ cargo build --release
 ./target/release/node-template --dev
 ```
 `--dev`选项表示以预定义的`development`开发模式的链规格(chain specification)启动节点。 使用`--dev`选项请先确保在任何时候停止和重新启动节点时，链数据都处于干净的工作状态。（可以再加上 `--tmp` 确保链数据处于干净状态）
-  
+
 5. 验证节点产生块。
 
 ### 构建自定义前端组件
@@ -291,7 +291,7 @@ cargo build --release
 现在有了一个使用自定义存证`模块Pallet`运行的新区块链，接下来在`前端模板（front-end-template）`中添加一个自定义 `React` 组件。这个 React 组件能够展示存证功能并与新创建的`模块Pallet`进行交互。
 
 ### 添加自定义 `React` 组件
-1. 在您的计算机上打开一个新的终端terminal  shell， 然后切换到安装`前端模板（front-end-template）`的根目录。  
+1. 在计算机上打开一个新的终端terminal  shell， 然后切换到安装`前端模板（front-end-template）`的根目录。  
 2. 在文本编辑器中打开文件`src/TemplateModule.js`。  
 3. 删除该文件的全部内容。
 4. 将以下代码复制并粘贴到`src/TemplateModule.js`文件中：
@@ -442,7 +442,7 @@ yarn        # 安装依赖
 yarn start  # 开启一个新的开发节点
 ```   
 这将打开一个新的浏览器选项卡，前端访问地址位于http://localhost:8000。  
-> 有什么不能工作？ [这里](https://github.com/substrate-developer-hub/substrate-front-end-template/tree/tutorials/solutions/proof-of-existence)有一个完整的前端`front-end-template`解决方案.如果遇到困难，可以用作参考。检查基于polkadot-v0.9.19为基础发布的确切的[代码变更历史](https://github.com/substrate-developer-hub/substrate-front-end-template/compare/latest...tutorials/solutions/proof-of-existence?expand=1)。
+> 有什么不能工作？ [这里](https://github.com/substrate-developer-hub/substrate-front-end-template/tree/tutorials/solutions/proof-of-existence)有一个完整的前端`front-end-template`解决方案，如果遇到困难，可以用作参考。检查基于polkadot-v0.9.19为基础发布的确切的[代码变更历史](https://github.com/substrate-developer-hub/substrate-front-end-template/compare/latest...tutorials/solutions/proof-of-existence?expand=1)。
 
 ### 提交存证
 使用新的前端`front-end-template`来测试存证PoE模块Pallet：  
