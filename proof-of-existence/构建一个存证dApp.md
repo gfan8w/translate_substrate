@@ -40,6 +40,7 @@
 
 ### 构建自定义模块(pallet)
 Substrate `node-template`模板程序有一个基于 [FRAME](https://docs.substrate.io/v3/runtime/frame/)的[运行时](https://docs.substrate.io/v3/concepts/runtime/)。 FRAME是一个代码库，允许您通过将称为“pallets”的模块来组合构建 Substrate 运行时。您可以将 `模块(pallet)` 视为定义区块链可以做什么的单独逻辑片段。Substrate 提供了许多用于基于 FRAME 的运行时的预构建`模块(pallet)`。
+<div></div>
 ![frame-runtime.png](./frame-runtime.png)
 本教程向您展示如何在您的自定义区块链中创建自己的 FRAME `模块(pallet)`。
 
