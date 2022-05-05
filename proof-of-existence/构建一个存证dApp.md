@@ -51,7 +51,7 @@ mock.rs
 tests.rs
 ```
 4. 在编辑器中打开 `pallets/template/src/lib.rs` 。  
-这个文件包含可用作新 `模块(pallet)` 的代码。您不会在本教程中使用这些示例代码。但是，您可以在删除示例代码之前查看它的内容。
+这个文件当前包含可用作新 `模块(pallet)` 的代码。但不会在本教程中使用这些示例代码。但是，可以在删除示例代码之前查看它的内容。
 1. 用下面的骨架代码将 `pallets/template/src/lib.rs` 里的所有代码替换掉，骨架代码包含了最小的代码框架需要的[FRAME V2 宏](https://docs.substrate.io/rustdocs/latest/frame_support/attr.pallet.html)：
 ```rust
 #![cfg_attr(not(feature = "std"), no_std)]
