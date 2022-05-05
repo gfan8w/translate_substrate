@@ -1,5 +1,7 @@
 ## 构建一个存证（proof of existence，简称PoE）的 dApp
 
+> 原文链接：https://docs.substrate.io/tutorials/v3/proof-of-existence/
+
 本教程演示如何使用 Substrate 区块链开发框架和`FRAME`依赖库创建自定义存证（PoE）服务。
 
 存证（PoE）服务是一种通过使用存储在区块链上的对象信息来验证数字对象的真实性和所有权的方法。因为区块链上有时间戳​​和与对象相关联的签名，所以区块链记录可用于验证（作为证据）在特定日期和时间存在特定对象。它还可以验证记录在该日期和时间的所有者是谁。
