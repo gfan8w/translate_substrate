@@ -45,7 +45,7 @@ Substrate `node-template`模板程序有一个基于 [FRAME](https://docs.substr
 
 本教程向您展示如何在您的自定义区块链中创建自己的 FRAME `模块(pallet)`。
 
-### 为`模块(pallet)`搭建脚手架
+### 为模块(pallet)搭建脚手架
 本教程演示如何从头开始创建自定义 `模块(pallet)` 。因此，第一步是从 `node-template` 目录中的文件中删除一些文件和内容。  
 1. 打开终端terminal shell并切换到 `node-template` 的项目根目录。  
 2. 通过运行以下命令切换到目录 `pallets/template/src`：
