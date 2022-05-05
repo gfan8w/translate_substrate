@@ -468,7 +468,7 @@ yarn start  # 开启一个新的开发节点
 3. 如何编译和启动包含自定义 `模块Pallet` 的节点。  
 4. 如何添加 React 前端组件以让用户使用自定义`模块Pallet` 。  
 
-本教程涵盖了基础知识，但并未深入到代码内部。但是，当努力构建自己的完全定制的区块链时，还更多的可做的事情。自定义 `模块Pallet`使能够丰富区块链支持的功能。
+本教程涵盖了基础知识，但并未深入到代码内部。但是，当努力构建自己的完全定制的区块链时，还更多的可做的事情。自定义 `模块Pallet`使得能够丰富区块链支持的功能。
 
 要了解有关创建自定义 `模块Pallet` 的可能性的更多信息，请浏览[FRAME 文档](https://docs.substrate.io/v3/runtime/frame/)和[How-to](https://docs.substrate.io/how-to-guides/v3/)指南。对于本教程的更具挑战性的版本，请前往[Substrate Kitties](https://docs.substrate.io/tutorials/v3/kitties/pt1/)教程。
 
