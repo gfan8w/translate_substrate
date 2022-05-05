@@ -5,7 +5,7 @@
 存证（PoE）服务是一种通过使用存储在区块链上的对象信息来验证数字对象的真实性和所有权的方法。因为区块链上有时间戳​​和与对象相关联的签名，所以区块链记录可用于验证（作为证据）在特定日期和时间存在特定对象。它还可以验证记录在该日期和时间的所有者是谁。
 
 ### 数字对象和哈希
-区块链使用[加密哈希](https://zh.wikipedia.org/wiki/%E5%AF%86%E7%A2%BC%E9%9B%9C%E6%B9%8A%E5%87%BD%E6%95%B8)来存储数字记录，而不是用单个文件来保存它们. 哈希使区块链能够通过使用很小且唯一的哈希值有效地存储任意大小的文件。因为对文件的任何更改都会导致不同的哈希值，用户可以通过计算哈希值并将该哈希值与存储在链上的哈希值进行比较来证明文件的有效性。
+区块链使用[密码学哈希](https://zh.wikipedia.org/wiki/%E5%AF%86%E7%A2%BC%E9%9B%9C%E6%B9%8A%E5%87%BD%E6%95%B8)来存储数字记录，而不是用单个文件来保存它们. 哈希使区块链能够通过使用很小且唯一的哈希值有效地存储任意大小的文件。因为对文件的任何更改都会导致不同的哈希值，用户可以通过计算哈希值并将该哈希值与存储在链上的哈希值进行比较来证明文件的有效性。
 ![file-hash.png](./file-hash.png)
 
 ### 数字对象和帐户签名
@@ -21,10 +21,10 @@
 您已完成[创建您的第一个 Substrate 区块链](https://docs.substrate.io/tutorials/v3/create-your-first-substrate-chain/)并拥有[node](https://github.com/substrate-developer-hub/substrate-node-template)和 [front-end](https://github.com/substrate-developer-hub/substrate-front-end-template)这2个模板程序。  
 熟悉软件开发并使用命令行工具。  
 通过完成本教程，您将实现以下目标：  
-了解定制 `模块(pallet)` 的基本方法。  
-了解 `Rust` 宏如何简化您需要编写的代码。  
-启动一个包含自定义 `模块(pallet)` 的区块链节点。 
-给带有存证(PoE) `模块(pallet)` 节点的程序添加前端代码。  
+* 了解定制 `模块(pallet)` 的基本方法。  
+* 了解 `Rust` 宏如何简化您需要编写的代码。  
+* 启动一个包含自定义 `模块(pallet)` 的区块链节点。 
+* 给带有存证(PoE) `模块(pallet)` 节点的程序添加前端代码。  
 
 ### 设计应用程序
 存在证明应用程序有以下可公开调用的函数：
@@ -33,13 +33,13 @@
 这些功能你需要关心的只是保存提出这个声明的用户和被声明的证明信息  
 
 ### 构建自定义模块(pallet)
-Substrate 节点模板有一个基于 [FRAME](https://docs.substrate.io/v3/runtime/frame/)的[运行时](https://docs.substrate.io/v3/concepts/runtime/)。 FRAME是一个代码库，允许您通过组合称为“pallets”的模块来构建 Substrate 运行时。您可以将 `模块(pallet)` 视为定义区块链可以做什么的单独逻辑片段。Substrate 提供了许多用于基于 FRAME 的运行时的预构建`模块(pallet)`。
+Substrate `node-template`模板程序有一个基于 [FRAME](https://docs.substrate.io/v3/runtime/frame/)的[运行时](https://docs.substrate.io/v3/concepts/runtime/)。 FRAME是一个代码库，允许您通过将称为“pallets”的模块来组合构建 Substrate 运行时。您可以将 `模块(pallet)` 视为定义区块链可以做什么的单独逻辑片段。Substrate 提供了许多用于基于 FRAME 的运行时的预构建`模块(pallet)`。
 ![frame-runtime.png](./frame-runtime.png)
 本教程向您展示如何在您的自定义区块链中创建自己的 FRAME `模块(pallet)`。
 
 ### 为`模块(pallet)`搭建脚手架
 本教程演示如何从头开始创建自定义 `模块(pallet)` 。因此，第一步是从 `node-template` 目录中的文件中删除一些文件和内容。  
-1. 打开终端外壳并切换到 `node-template` 的项目根目录。  
+1. 打开终端terminal shell并切换到 `node-template` 的项目根目录。  
 2. 通过运行以下命令切换到目录 `pallets/template/src`：
 ```bash
 cd pallets/template/src
