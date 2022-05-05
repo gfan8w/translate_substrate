@@ -22,6 +22,7 @@
 * 通过[安装Rust 和 Rust 工具链](https://docs.substrate.io/v3/getting-started/installation/)，为 Substrate 配置好开发环境。  
 * 已完成[创建您的第一个 Substrate 区块链](https://docs.substrate.io/tutorials/v3/create-your-first-substrate-chain/)并拥有[node](https://github.com/substrate-developer-hub/substrate-node-template)和 [front-end](https://github.com/substrate-developer-hub/substrate-front-end-template)这2个模板程序。  
 * 熟悉软件开发并使用命令行工具。    
+
 通过完成本教程，您将实现以下目标：  
 * 了解定制 `模块(pallet)` 的基本方法。  
 * 了解 `Rust` 宏如何简化您需要编写的代码。  
