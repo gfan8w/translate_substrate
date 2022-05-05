@@ -169,7 +169,7 @@ cargo build -r
 要实现存证`模块Pallet`的存储，请将以下代码添加到 `// TODO: add #[pallet::storage] `代码块：
 ```rust
 #[pallet::storage]
-    /// Map，当每个存证proof被创建时，保存 存证 到 所有者和区块号的映射
+    /// Map，当每个存证proof被创建时，保存 '存证->所有者和区块号的映射'
     pub(super) type Proofs<T: Config> = StorageMap<
         _,
         Blake2_128Concat,
